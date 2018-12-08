@@ -1,0 +1,23 @@
+{% extends 'core/index.html'%} 
+{% block titulo %} Comunidades {% endblock titulo %} 
+{% block contenedor2 %}
+{% load static %}
+<div col s12 style="margin: 0px 300px">
+    <div class="row">
+        <h3 class="center-align">Seleccione Una Parroquia</h3>
+        <br>
+            {% for dato in lista %}
+    <div class="col s4" style="padding-left: 0px">
+        <div>
+            <a href={% block href %}"{% url 'bautizos' dato.id %}" {% endblock href%}>
+                <img class="responsive-img" src="{% static 'core/img/' %}{{dato.img}}" id="{{dato.id}}">
+            </a>
+            <p class="center-align" style="font-size: 20px">
+                    {{dato.nombre}}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock contenedor2 %}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>
+        {% block titulo %}
+        Base
+        {% endblock titulo %}
+    </title>
+
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="{% static 'core/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="{% static 'core/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="{% static 'core/css/flipclock.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+    {% block css %}
+    {% endblock css %}
+    <style>
+        #clock-wrapper {
+            transform: scale(0.5);
+        }
+
+        body {
+            background: #649173;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #DBD5A4, #649173);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #DBD5A4, #649173);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        .light-green.darken-3 {
+            background: -webkit-linear-gradient(to left, #DBD5A4, #649173);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #DBD5A4, #649173);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .page-footer {
+            background: -webkit-linear-gradient(to left, #DBD5A4, #649173);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #DBD5A4, #649173);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 5px 0px;
+            float: left;
+        }
+
+        .wp-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            vertical-align: middle;
+            color: #fff;
+            margin-right: 0px;
+        }
+
+        th {
+            font-size: 20px;
+        }
+
+        .wp-icon:hover {
+            transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            -webkit-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            -moz-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            -ms-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            -o-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+        }
+
+        .fa-twitter {
+            background: #1DA1F2;
+        }
+
+        .fa-instagram {
+            background: #d6249f;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+        }
+
+        .fa-youtube {
+            background: #FF0000;
+        }
+
+            {
+            % block style %
+        }
+
+            {
+            % endblock style %
+        }
+    </style>
+</head>
+
+<body>
+    {% block contenedor%}
+
+    {% endblock contenedor %}
+    <footer class="page-footer orange ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="orange-text text-lighten-3">Quiénes Somos</h5>
+                    <p class="white-text">
+                        Somos una parroquia dedicada de manera integra al servicio de la comunidad,
+                        siguiendo los pasos de Jesucristo y su camino a través del evangelio, con amor, honestidad,
+                        compromiso y lealtad a nuestros hermanos.
+                    </p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="orange-text text-lighten-3">Redes Sociales</h5>
+                    <ul>
+                        <li><a class="fab wp-icon fa-instagram" href="https://www.instagram.com/episcopado_cl/"></a></li>
+                        <li><a class="fab wp-icon fa-twitter" href="https://twitter.com/iglesiachile"></a></li>
+                        <li><a class="fab wp-icon fa-facebook" href="https://www.facebook.com/Conferencia-Episcopal-de-Chile-171715069507104/"></a></li>
+                        <li><a class="fab wp-icon fa-youtube" href="https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ"></a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="orange-text text-lighten-3">Páginas Asociadas</h5>
+                    <ul>
+                        <li><a class="white-text" href="http://www.iglesia.cl/">Conferencia Episcopal Chile</a></li>
+                        <li><a class="white-text" href="http://www.mesdelasolidaridad.cl/">Mes De La Solidaridad</a></li>
+                        <li><a class="white-text" href="http://www.congresoeucaristico2018.cl/">Congreso Eucarístico</a></li>
+                        <li><a class="white-text" href="http://www.iglesia.cl/especiales/navidad2018/index.php">Navidad
+                                2018</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Hecho Por <a class="orange-text text-lighten-3" href="http://materializecss.com">Scarecrow</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'core/js/materialize.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{% static 'core/js/animatedModal.min.js' %}"></script>
+    <script src="{% static 'core/js/flipclock.min.js' %}"></script>
+
+
+    <script>
+        $.fn.extend({
+            animateCss: function (animationName, callback) {
+                var animationEnd = (function (el) {
+                    var animations = {
+                        animation: 'animationend',
+                        OAnimation: 'oAnimationEnd',
+                        MozAnimation: 'mozAnimationEnd',
+                        WebkitAnimation: 'webkitAnimationEnd',
+                    };
+
+                    for (var t in animations) {
+                        if (el.style[t] !== undefined) {
+                            return animations[t];
+                        }
+                    }
+                })(document.createElement('div'));
+
+                this.addClass('animated ' + animationName).one(animationEnd, function () {
+                    $(this).removeClass('animated ' + animationName);
+
+                    if (typeof callback === 'function') callback();
+                });
+
+                return this;
+            },
+        });
+
+        $(document).ready(function () {
+
+
+
+            $('#versiculo').mouseover(function () {
+                $('#versiculo').animateCss('pulse');
+            });
+            $('#versiculo2').mouseover(function () {
+                $(this).animateCss('pulse');
+            });
+            $('#iconindex').mouseover(function () {
+                $('#icon2').attr('class', 'center yellow-text text-accent-4');
+                $('#iconindex').animateCss('bounce');
+            });
+            $('#iconindex').mouseout(function () {
+                $('#icon2').attr('class', 'center brown-text');
+            });
+            $('#iconindex2').mouseover(function () {
+                $('#icon3').attr('class', 'center yellow-text text-accent-4');
+                $('#iconindex2').animateCss('bounce');
+            });
+            $('#iconindex2').mouseout(function () {
+                $('#icon3').attr('class', 'center brown-text');
+            });
+            $('#iconindex3').mouseover(function () {
+                $('#icon4').attr('class', 'center yellow-text text-accent-4');
+                $('#iconindex3').animateCss('bounce');
+            });
+            $('#iconindex3').mouseout(function () {
+                $('#icon4').attr('class', 'center brown-text');
+            });
+
+            // parroquias /comunidades/
+            // id de clase llenado con id de modelo
+
+            $('#1').mouseover(function () {
+                $(this).animateCss("bounce");
+            });
+            $('#2').mouseover(function () {
+                $(this).animateCss('bounce');
+            });
+            $('#3').mouseover(function () {
+                $(this).animateCss('bounce');
+            });
+            $('#4').mouseover(function () {
+                $(this).animateCss('bounce');
+            });
+            $('#5').mouseover(function () {
+                $(this).animateCss('bounce');
+            });
+            $('#6').mouseover(function () {
+                $(this).animateCss('bounce');
+            });
+
+            // zoom tablas bautizos
+
+            $('#tablap').hover(
+                function () {
+                    $(this).animate({
+                        'zoom': 1.2
+                    }, 400);
+                },
+                function () {
+                    $(this).animate({
+                        'zoom': 1
+                    }, 400);
+                });
+        });
+
+        var clock;
+
+        $(document).ready(function () {
+
+            // Grab the current date
+            var currentDate = new Date();
+
+            // Set some date in the future. In this case, it's always Jan 1
+            var futureDate = new Date(currentDate.getFullYear(), 11, 25);
+
+            // Calculate the difference in seconds between the future and current date
+            var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+            // Instantiate a coutdown FlipClock
+            clock = $('.clock').FlipClock(diff, {
+                clockFace: 'DailyCounter',
+                countdown: true
+            });
+        });
+
+$(document).ready(function () {
+            $('select').formSelect();
+        });
+
+        $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal({
+        dismissible: true
+    });
+  });
+    </script>
+
+</body>
+
+</html>

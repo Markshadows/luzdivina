@@ -1,0 +1,41 @@
+{% extends 'core/base_admin.html' %}
+{% block titulo %}
+Solicitudes
+{% endblock titulo %}
+{% block style %}
+#h1mio {
+animation-duration: 1s;
+animation-delay: 1s;
+animation-iteration-count: infinite;
+}
+#divt{
+    margin-bottom: 150px;
+}
+{% endblock style %}
+{% load static %}
+{% block contenedor %}
+<div class="container">
+        <div class="col s12">
+            <div class="valign-wrapper">
+                <img class="responsive-img" src="{% static 'core/img/10.png' %}" height="150" width="150" style="margin-right: 3%">
+                <h1>Solicitudes De Eventos</h1>
+            </div>
+            <table class="responsive-table" id="tablaadm">
+                <tr>
+                    <th><i class="fas fa-cross brown-text"></i> Nombre</th>
+                    <th><i class="fas fa-edit brown-text"></i> Descripción</th>
+                    <th><i class="fas fa-calendar-alt brown-text"></i> Fecha</th>
+                    <th><i class="fas fa-calendar-alt brown-text"></i> Estado</th>
+                </tr>
+                {% for fila in solicitudes %}
+                <tr>
+                    <td>{{fila.nombre}}</td>
+                    <td>{{fila.descripcion}}</td>
+                    <td>{{fila.fecha}}</td>
+                    <td>{{fila.estado}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock contenedor %}

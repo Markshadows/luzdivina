@@ -1,0 +1,28 @@
+{% extends 'core/index.html'%}
+{% block titulo %} Bautizos {% endblock titulo %}
+{% block contenedor2 %}
+{% load static %}
+<div class="container">
+    <div class="col s12">
+        <div class="valign-wrapper">
+            <img class="responsive-img" src="{% static 'core/img/' %}{{comunidad.img}}" height="150" width="150" style="margin-right: 3%">
+            <h1>{% block ntabla %}Bautizos{% endblock ntabla %} de {{comunidad.nombre}}</h1>
+        </div>
+        <table class="responsive-table" id="tablap">
+            <tr>
+                <th><i class="fas fa-cross brown-text"></i> Tipo</th>
+                <th><i class="fas fa-calendar-alt brown-text"></i> Fecha</th>
+                <th><i class="fas fa-edit brown-text"></i> Descripción</th>
+            </tr>
+            {% for fila in eventos %}
+            <tr>
+                <td>{{fila.nombre.nombre}}</td>
+                <td>{{fila.fecha}}</td>
+                <td>{{fila.descripcion}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock contenedor2 %}

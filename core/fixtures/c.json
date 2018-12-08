@@ -1,0 +1,261 @@
+[{
+    "model": "core.comunidad",
+    "pk": 1,
+    "fields": {
+        "nombre": "Alas Felices",
+        "ubicacion": "San Carlos 1354",
+        "img":"i3.png"
+    }
+}, {
+    "model": "core.comunidad",
+    "pk": 2,
+    "fields": {
+        "nombre": "Triunvirato",
+        "ubicacion": "Concha y Toro #1932",
+        "img":"i1.png"
+    }
+}, {
+    "model": "core.comunidad",
+    "pk": 3,
+    "fields": {
+        "nombre": "Alerces",
+        "ubicacion": "San Jose #2932",
+        "img":"i2.png"
+    }
+}, {
+    "model": "core.sacramento",
+    "pk": 1,
+    "fields": {
+        "nombre": "Bautizo"
+    }
+}, {
+    "model": "core.sacramento",
+    "pk": 2,
+    "fields": {
+        "nombre": "Comunion"
+    }
+}, {
+    "model": "core.sacramento",
+    "pk": 3,
+    "fields": {
+        "nombre": "Boda"
+    }
+}, {
+    "model": "core.coordinador",
+    "pk": 1,
+    "fields": {
+        "nombre": "Pedro",
+        "appaterno": "Gonzalez",
+        "edad": "56",
+        "comunidad": 1
+    }
+}, {
+    "model": "core.coordinador",
+    "pk": 2,
+    "fields": {
+        "nombre": "Andres",
+        "appaterno": "Marambio",
+        "edad": "43",
+        "comunidad": 2
+    }
+}, {
+    "model": "core.coordinador",
+    "pk": 3,
+    "fields": {
+        "nombre": "Javier",
+        "appaterno": "Burdiles",
+        "edad": "40",
+        "comunidad": 3
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 1,
+    "fields": {
+        "nombre": "Benedicto",
+        "appaterno": "XVI",
+        "edad": "74",
+        "sacramento": 1,
+        "comunidad": 1
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 2,
+    "fields": {
+        "nombre": "Juan Pablo",
+        "appaterno": "Ratzinger",
+        "edad": "70",
+        "sacramento": 2,
+        "comunidad": 1
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 3,
+    "fields": {
+        "nombre": "Juan Pablo",
+        "appaterno": "Battista",
+        "edad": "74",
+        "sacramento": 3,
+        "comunidad": 1
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 4,
+    "fields": {
+        "nombre": "Javier",
+        "appaterno": "Luciani",
+        "edad": "60",
+        "sacramento": 1,
+        "comunidad": 2
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 5,
+    "fields": {
+        "nombre": "Andres",
+        "appaterno": "Wojtyla",
+        "edad": "72",
+        "sacramento": 2,
+        "comunidad": 2
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 6,
+    "fields": {
+        "nombre": "Freddy",
+        "appaterno": "Pacelli",
+        "edad": "65",
+        "sacramento": 3,
+        "comunidad": 2
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 7,
+    "fields": {
+        "nombre": "Felipe",
+        "appaterno": "Rati",
+        "edad": "64",
+        "sacramento": 1,
+        "comunidad": 3
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 8,
+    "fields": {
+        "nombre": "Francisco",
+        "appaterno": "Sarto",
+        "edad": "68",
+        "sacramento": 2,
+        "comunidad": 3
+    }
+}, {
+    "model": "core.agentepastoral",
+    "pk": 9,
+    "fields": {
+        "nombre": "Giuseppe",
+        "appaterno": "Rossi",
+        "edad": "63",
+        "sacramento": 3,
+        "comunidad": 3
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 1,
+    "fields": {
+        "nombre": "Max",
+        "appaterno": "Rati",
+        "edad": "74",
+        "comunidad": 1
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 2,
+    "fields": {
+        "nombre": "Chiquitin",
+        "appaterno": "Battista",
+        "edad": "74",
+        "comunidad": 1
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 3,
+    "fields": {
+        "nombre": "Pedro",
+        "appaterno": "Pacelli",
+        "edad": "65",
+        "comunidad": 1
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 4,
+    "fields": {
+        "nombre": "Lucas",
+        "appaterno": "Simon",
+        "edad": "61",
+        "comunidad": 2
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 5,
+    "fields": {
+        "nombre": "Lucas",
+        "appaterno": "Pratto",
+        "edad": "35",
+        "comunidad": 2
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 6,
+    "fields": {
+        "nombre": "Mario",
+        "appaterno": "Benedetto",
+        "edad": "36",
+        "comunidad": 2
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 7,
+    "fields": {
+        "nombre": "Esteban",
+        "appaterno": "Paredes",
+        "edad": "35",
+        "comunidad": 3
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 8,
+    "fields": {
+        "nombre": "Jaime",
+        "appaterno": "Valdes",
+        "edad": "39",
+        "comunidad": 3
+    }
+}, {
+    "model": "core.ministrocomunion",
+    "pk": 9,
+    "fields": {
+        "nombre": "Claudio",
+        "appaterno": "Baeza",
+        "edad": "26",
+        "comunidad": 3
+    }
+},
+{
+    "model": "core.solicitud",
+    "pk": 1,
+    "fields": {
+        "nombre": "Stanislav Putin",
+        "descripcion": "Necesito bautizar a mi hijo nacido en Chile, antes del mes entrante. Su nombre es Nicolas Putin y tiene 10 años",
+        "comunidad": 2
+    }
+},
+ {
+    "model": "core.evento",
+    "pk": 1,
+    "fields": {
+        "nombre": 1,
+        "fecha": "2018-11-30T19:54:17Z",
+        "descripcion": "Queda reservada la parroquia para este dia, el evento durara 5 horas.",
+        "comunidad": 1,
+        "solicitud": 1
+    }
+}]

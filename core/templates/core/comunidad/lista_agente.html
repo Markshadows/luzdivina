@@ -1,0 +1,29 @@
+{% extends 'core/base_admin.html' %}
+{% block titulo %}
+Agentes
+{% endblock titulo %}
+{% load static %}
+{% block contenedor %}
+<div class="container" id="divt">
+        <div class="valign-wrapper">
+                <img class="responsive-img" src="{% static 'core/img/' %}{{comunidad.img}}" height="150" width="150" style="margin-right: 3%">
+                <h1 class="">Agentes Pastorales de {{comunidad.nombre}}</h1>
+            </div>
+    <table class="responsive-table" id="tablaadm">
+        <tr>
+                <th><i class="fas fa-cross brown-text"></i> Nombre</th>
+                <th><i class="fas fa-cross brown-text"></i> Apellido</th>
+                <th><i class="fas fa-universal-access brown-text"></i> Edad</th>
+                <th><i class="fas fa-user-graduate brown-text"></i> Especialidad</th>
+        </tr>
+        {% for fila in lista3 %}
+        <tr>
+            <td>{{fila.nombre}}</td>
+            <td>{{fila.appaterno}}</td>
+            <td>{{fila.edad}}</td>
+            <td>{{fila.sacramento.nombre}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock contenedor %}

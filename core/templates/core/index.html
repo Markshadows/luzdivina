@@ -1,0 +1,167 @@
+{% extends 'core/base.html'%}
+{% block titulo %}
+Parroquia Luz Divina
+{% endblock titulo %}
+{% load static %}
+{% block contenedor %}
+<div class="section no-pad-bot" id="index-banner">
+
+  <div class="container">
+
+    <br><br>
+    <div class="valign-wrapper">
+
+      <img class="responsive-img" src="{% static 'core/img/40.jpg' %}" width="150px" height="150" style="margin-left: 15%">
+      <a href="{% url 'home' %}" class="black-text">
+        <h1 class="header center darken4-text animated pulse infinite" style="padding-left: 0%" id=h1mio>Parroquia Luz
+          Divina</h1>
+      </a>
+    </div>
+    <br>
+    <div class="divider"></div>
+    <div class="row center">
+      <h4>Versículo de la semana</h3>
+        <h5 class="header col s12 light" id="versiculo"><i class="fas fa-bible brown-text" style="margin-right: 1%"></i>
+          Juan 3:16 – “Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que
+          en él cree, no se pierda, mas tenga vida eterna”.
+        </h5>
+    </div>
+    <br><br>
+  </div>
+</div>
+{% block contenedor2 %}
+<div class="container">
+
+  <div class="section">
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4 ">
+
+        <div class="icon-block ">
+          <div id="iconindex">
+            <h2 class="center brown-text"><a id="icon2" href="{% url 'comunidades' %}" class="center brown-text"><i
+                  class="fas fa-pray"></i></a></h2>
+            <h5 class="center">Bautizos</h5>
+          </div>
+          <p class="light">
+            La relevancia del Bautismo para el catolicismo está dada porque al recibir el mismo, el fiel, pasa a ser
+            oficialmente un cristiano,
+            se lo admite en la iglesia como tal, se le borra su pecado original y se transforma inmediatamente en hijo
+            de Dios, con todos los derechos, compromisos y obligaciones que ello implica.
+            Es además el primer sacramento que recibe un cristiano y por ello resulta ser uno de los más valorados por
+            los creyentes
+          </p>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <div id="iconindex2">
+            <h2 class="center brown-text"><a id="icon3" href="{% url 'comunidadesb' %}" class="center brown-text"><i
+                  class="fas fa-church"></i></a></h2>
+            <h5 class="center">Bodas</h5>
+          </div>
+          <p class="light">
+            El matrimonio es una institución que forma parte de la naturaleza humana y que implica unidad e
+            indisolubilidad.
+            Esta unión exige un compromiso de por vida que no puede disolverse más que con el fallecimiento de uno de
+            los cónyuges.
+            Este sacramento de la Iglesia Católica constituye una comunidad de vida entre los cónyuges y está ordenado
+            a la concepción y la educación de sus hijos
+            de principio a fin.
+          </p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <div id="iconindex3">
+            <h2 class="center brown-text"><a id="icon4" href="{% url 'comunidadesc' %}" class="center brown-text"><i
+                  class="fas fa-dove"></i></a></h2>
+            <h5 class="center">Comuniones</h5>
+          </div>
+          <p class="light">
+            La comunión o eucaristía es el sacramento que consiste en la transformación de un pedazo de pan (conocido
+            como hostia)
+            y del vino en el cuerpo y la sangre de Cristo para que estas sustancias sean recibidas por el creyente.
+            No hay que olvidar tampoco que además dentro del ámbito religioso, y concretamente del católico, está lo
+            que se conoce como comunión de los santos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="left-align">
+    <h4>
+      ¿Desea solicitar la parroquia para recibir un sacramento?
+    </h4>
+    <h5>
+      Envíe una solicitud y le agendaremos una fecha.
+    </h5>
+  </div>
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-orange btn modal-trigger pulse" href="#modal1"><i class="material-icons left">local_post_office</i>Solicitar</a>
+  <br><br>
+  <div class="divider"></div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Registre Sus Datos</h4>
+      <div class="container">
+        <div class="row">
+          <form class="col s12" method="POST">
+            {% csrf_token %}
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="nombre" type="text" class="validate">
+                <label for="first_name">Nombre Completo</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+
+                <input name="descripcion" type="text" class="validate">
+                <label for="last_name">Describa su solicitud</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <select name="comunidad">
+                  <option value="" disabled selected>Seleccionar</option>
+                  {% for dato in lista %}
+                  <option value="{{dato.id}}">{{dato.nombre}}</option>
+                  {% endfor %}
+                </select>
+                <label>Comunidad</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-s3" style="margin-left: 200px">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Agregar
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <a href="{% url 'home' %}" class="modal-close waves-effect waves-green btn-flat">{{mensaje}}</a>
+        <a href="#" class="modal-close waves-effect waves-green btn-flat">cerrar</a>
+      </div>
+  </div>
+  <h2>Se acerca el nacimiento de Jesús</h2>
+  <h5 class="header col s12 light" id="versiculo2"><i class="fas fa-bible brown-text" style="margin-right: 1%"></i>
+    Isaías 9:5 – "Porque un niño nos ha nacido, un hijo se nos ha dado; le ponen en el hombro el distintivo del rey y
+    proclaman su nombre: Consejero admirable, Dios fuerte, Padre que no muere, príncipe de la Paz."
+  </h5>
+  <br>
+  <div class="valign-wrapper">
+    <div class="clock" style="margin:2em;"></div>
+    <img class="circle responsive-img" src="{% static 'core/img/Natividad.jpg' %}" width="250px" height="250px" style="margin-left: 0%">
+
+  </div>
+</div>
+{% endblock contenedor2 %}
+{% endblock contenedor %}

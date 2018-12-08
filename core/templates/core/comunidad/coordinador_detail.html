@@ -1,0 +1,21 @@
+{% extends 'core/base_admin.html'%}
+
+{% block contenedor %}
+<div class="container abc">
+    <table class="table">
+        <thead>Coordinadores Actuales</thead>
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Edad</td>
+            <td>Comunidad Perteneciente</td>
+        </tr>
+        <tr>
+            <td>{{coordinador.nombre}}</td>
+            <td>{{coordinador.appaterno}}</td>
+            <td>{{coordinador.edad}}</td>
+            <td>{{coordinador.comunidad.nombre}}</td>
+        </tr>
+    </table>
+</div>
+{% endblock contenedor %}

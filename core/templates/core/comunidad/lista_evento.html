@@ -1,0 +1,35 @@
+{% extends 'core/base_admin.html' %}
+{% block titulo %}
+Eventos
+{% endblock titulo %}
+{% load static %}
+{% block contenedor %}
+<div class="container" id="divt">
+        <div class="valign-wrapper">
+                <img class="responsive-img" src="{% static 'core/img/' %}{{comunidad.img}}" height="150" width="150" style="margin-right: 3%">
+                <h1>Eventos de {{comunidad.nombre}}</h1>
+            </div>
+    <form class="col s5" method="POST">
+            {% csrf_token %}
+            <label for="fecha" class="black-text">Seleccionar Mes</label>
+    <input type="text" class="datepicker" name="mes_elegido">
+    <button class="btn waves-effect waves-light" type="submit" name="action">Filtrar
+            <i class="material-icons right">search</i>
+          </button>
+    </form>
+    <table class="responsive-table" id="tablaadm">
+        <tr>
+                <th><i class="fas fa-cross brown-text"></i> Tipo</th>
+                <th><i class="fas fa-calendar-alt brown-text"></i> Fecha</th>
+                <th><i class="fas fa-edit brown-text"></i> Descripción</th>
+        </tr>
+        {% for fila in lista5 %}
+        <tr>
+            <td>{{fila.nombre.nombre}}</td>
+            <td>{{fila.fecha}}</td>
+            <td>{{fila.descripcion}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock contenedor %}
