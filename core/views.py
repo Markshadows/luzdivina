@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import Http404
 from .models import Coordinador, AgentePastoral, MinistroComunion, Comunidad, Evento, Sacramento, Solicitud
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -27,6 +28,7 @@ def Home(request):
     return render(request,'core/index.html',
                               {'lista':lista})   
 
+@login_required
 def Admin(request):
     return render(request,'core/administrador.html',{'lista':lista})
 
