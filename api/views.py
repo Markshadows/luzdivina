@@ -7,10 +7,6 @@ class ComunidadLista(generics.ListCreateAPIView):
     queryset = Comunidad.objects.all()
     serializer_class= ComunidadSerializers
 
-class ComunidadDetalle(generics.RetrieveUpdateDestroyAPIView):
-    queryset= Comunidad.objects.all()
-    serializer_class=ComunidadSerializers
-
 class EventoComunidad(generics.ListCreateAPIView):
      serializer_class = EventoSerializers
      def get_queryset(self):

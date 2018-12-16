@@ -4,7 +4,7 @@ from rest_framework import serializers
 class ComunidadSerializers(serializers.ModelSerializer):
     class Meta:
         model = Comunidad
-        fields= ('id','nombre','ubicacion')
+        fields= ('id','nombre','ubicacion', 'img')
 
 class EventoSerializers(serializers.ModelSerializer):
     class Meta:

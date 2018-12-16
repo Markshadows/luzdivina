@@ -1,6 +1,6 @@
 
 from django.conf.urls import url
-from .views import ComunidadDetalle,ComunidadLista,EventoComunidad
+from .views import ComunidadLista,EventoComunidad
 
 urlpatterns = [
     url('comunidad_lista/',ComunidadLista.as_view()),
