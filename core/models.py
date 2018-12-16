@@ -5,7 +5,7 @@ from datetime import datetime
 class Comunidad(models.Model):
     nombre=models.CharField(max_length=45)
     ubicacion=models.CharField(max_length=45)
-    img = models.CharField(max_length=45, default='i3.png')
+    img = models.CharField(max_length=255, default='i3.png')
 
     def __str__(self):
         return self.nombre

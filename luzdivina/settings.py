@@ -25,7 +25,7 @@ SECRET_KEY = 'm8244htg=!1mdkc3x0qg*oh9$j1dhvs9ih@h%&z0-mlq_*wi1k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['scarecrow.pythonanywhere.com']
 
 
 # Application definition
